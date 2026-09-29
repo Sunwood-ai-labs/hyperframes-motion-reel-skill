@@ -1,0 +1,24 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" fill="#050505"/>
+  <g stroke="#F4F4F0" stroke-opacity="0.06" stroke-width="1.5">
+    <path d="M80 0V640M160 0V640M240 0V640M320 0V640M400 0V640M480 0V640M560 0V640M640 0V640M720 0V640M800 0V640M880 0V640M960 0V640M1040 0V640M1120 0V640M1200 0V640"/>
+    <path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280M0 560H1280"/>
+  </g>
+  <path d="M0 520H1280" stroke="#D7FF00" stroke-opacity="0.5" stroke-width="2"/>
+  <g font-family="'Archivo Black','Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900">
+    <text x="80" y="228" fill="#F4F4F0" font-size="132" letter-spacing="-4">HYPERFRAMES</text>
+    <text x="80" y="360" fill="#D7FF00" font-size="132" letter-spacing="-4">MOTION REEL</text>
+  </g>
+  <text x="84" y="430" fill="#F4F4F0" fill-opacity="0.7" font-family="'Space Mono','JetBrains Mono',Consolas,monospace" font-size="26" letter-spacing="2">120 BPM · 60 FPS · HTML + GSAP + SVG + CANVAS · APACHE-2.0</text>
+  <g transform="translate(1000 196) scale(0.5)">
+    <path d="M204 132L388 240L204 348Z" fill="#D7FF00"/>
+    <path d="M232 188L316 240L232 292Z" fill="#050505"/>
+  </g>
+  <g fill="#F4F4F0">
+    <rect x="80" y="552" width="10" height="44"/><rect x="120" y="566" width="10" height="30"/><rect x="160" y="540" width="10" height="56" fill="#D7FF00"/>
+    <rect x="200" y="572" width="10" height="24"/><rect x="240" y="556" width="10" height="40"/><rect x="280" y="566" width="10" height="30"/>
+    <rect x="320" y="540" width="10" height="56" fill="#D7FF00"/><rect x="360" y="574" width="10" height="22"/><rect x="400" y="560" width="10" height="36"/>
+    <rect x="440" y="566" width="10" height="30"/><rect x="480" y="540" width="10" height="56" fill="#D7FF00"/><rect x="520" y="570" width="10" height="26"/>
+  </g>
+  <text x="1200" y="596" text-anchor="end" fill="#F4F4F0" fill-opacity="0.45" font-family="'Space Mono',Consolas,monospace" font-size="20" letter-spacing="3">b(0) → b(30) · f0 → f900</text>
+</svg>
