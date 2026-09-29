@@ -176,6 +176,8 @@ HyperFrames の必須ルール（違反すると lint エラーまたは無言�
 - 変形させる要素は block 要素かつサイズ指定あり。本文に `<br>` を使わない（意図的な 1 語 1 行の見出しは可）。
 - **`fromTo` の from 側だけに書いたプロパティ（例：`{opacity: 1, scale: 0}` → `{scale: 1}`）は、並列ワーカーの途中シークでは適用されず要素が消える**。snapshot では正しく見えても本番 render で欠落する。from に書いたプロパティは必ず to にも同じ値で書く（`{opacity: 1, scale: 0}` → `{opacity: 1, scale: 1}`）。
 - 後続の `fromTo` は `immediateRender: false` を基本にし、初期状態は timeline 構築前の `gsap.set` で与える。
+- 外部 `<script src>` はコンパイラによって DOM より前に巻き上げられることがある。DOM 生成・タイムライン構築は外部ファイル内で関数として定義し、`index.html` のインライン `<script>` で `DOMContentLoaded` 後に呼んで `window.__timelines["main"] = tl` を登録する（lint はインラインの登録しか検出しない）。
+- **CSS は `index.html` のインライン `<style>` に書く**。外部 `<link rel="stylesheet">` に書いた `font-family` はコンパイラのフォント埋め込み対象にならず、snapshot では正しく見えても本番 render で代替フォントになる（render ログに `Injected deterministic @font-face` が出ているか確認する）。
 - マスク内に隠しているだけのテキストも check の重なり監査に数えられる。出番以外は `autoAlpha: 0`（非 clip のラッパー）で消しておく。
 - レンダー後は `ffmpeg -ss <t> -frames:v 1` で本番 MP4 から山場のフレームを抜き、snapshot と見比べる（snapshot と render で結果が違うことがある）。
 
